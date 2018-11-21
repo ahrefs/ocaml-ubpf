@@ -1,0 +1,17 @@
+opam-version: "2.0"
+name: "ubpf"
+version: "0.1"
+synopsis: "OCaml bindings for userspace eBPF VM"
+maintainer: "Raman Varabets <roman.vorobets@gmail.com>"
+authors: [
+  "Raman Varabets <roman.vorobets@gmail.com>"
+  "ygrek <ygrek@autistici.org>"
+]
+homepage: "https://github.com/cyberhuman/ocaml-ubpf"
+bug-reports: "https://github.com/cyberhuman/ocaml-ubpf/issues"
+dev-repo: "git+https://github.com/cyberhuman/ocaml-ubpf.git"
+depends: [ "ocaml" "ocamlfind" ]
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+]

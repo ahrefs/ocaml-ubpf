@@ -1,0 +1,15 @@
+(library
+  (name ubpf_c)
+  (public_name ubpf.c)
+  (modules)
+  (self_build_stubs_archive (ubpf_c)))
+
+(ignored_subdirs (ubpf))
+
+(rule
+  (deps (source_tree ubpf))
+  (targets libubpf_c_stubs.a)
+  (action (progn
+            (chdir ubpf/vm (run make))
+            (copy ubpf/vm/libubpf.a libubpf_c_stubs.a)
+            (copy ubpf/vm/inc/ubpf.h ubpf.h))))

@@ -1,0 +1,9 @@
+(library
+  (name ubpf)
+  (public_name ubpf)
+  (libraries ubpf_c)
+  (modules ubpf)
+  (wrapped false)
+  (c_library_flags (:standard -lstdc++))
+  (cxx_names ubpf_stubs bpf)
+  (cxx_flags -g -O2 -Wextra -Wstrict-overflow=5 -Iubpf_c))

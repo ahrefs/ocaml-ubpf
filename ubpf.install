@@ -1,0 +1,4 @@
+lib: [
+  "_build/install/default/lib/ubpf/META" {"META"}
+  "_build/install/default/lib/ubpf/opam" {"opam"}
+]
