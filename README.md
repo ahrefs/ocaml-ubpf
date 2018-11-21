@@ -1,5 +1,7 @@
 OCaml bindings for the [Userspace eBPF VM](https://github.com/iovisor/ubpf).
 
+uBPF is patched to initialize R2 with data size.
+
 ```
 let exec bpf data =
   let open Ubpf in
