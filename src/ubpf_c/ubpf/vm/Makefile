@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-CFLAGS := -Wall -Werror -Iinc -O2 -g
+CFLAGS := -Wall -Werror -Iinc -O2 -g -fPIC
 LDLIBS := -lm
 
 ifeq ($(COVERAGE),1)
@@ -25,12 +25,15 @@ CFLAGS += -fsanitize=address
 LDFLAGS += -fsanitize=address
 endif
 
-all: libubpf.a test
+all: libubpf.a dllubpf.so test
 
 ubpf_jit_x86_64.o: ubpf_jit_x86_64.c ubpf_jit_x86_64.h
 
 libubpf.a: ubpf_vm.o ubpf_jit_x86_64.o ubpf_loader.o
 	ar rc $@ $^
+
+dllubpf.so: ubpf_vm.o ubpf_jit_x86_64.o ubpf_loader.o
+	gcc -shared $^ -o $@
 
 test: test.o libubpf.a
 

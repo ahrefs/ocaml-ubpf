@@ -1,4 +1,31 @@
 lib: [
   "_build/install/default/lib/ubpf/META" {"META"}
+  "_build/install/default/lib/ubpf/c/libubpf_c_stubs.a" {"c/libubpf_c_stubs.a"}
+  "_build/install/default/lib/ubpf/c/ubpf.c.dune" {"c/ubpf.c.dune"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.a" {"c/ubpf_c.a"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.cma" {"c/ubpf_c.cma"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.cmi" {"c/ubpf_c.cmi"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.cmt" {"c/ubpf_c.cmt"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.cmx" {"c/ubpf_c.cmx"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.cmxa" {"c/ubpf_c.cmxa"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.cmxs" {"c/ubpf_c.cmxs"}
+  "_build/install/default/lib/ubpf/c/ubpf_c.ml-gen" {"c/ubpf_c.ml-gen"}
+  "_build/install/default/lib/ubpf/libubpf_stubs.a" {"libubpf_stubs.a"}
   "_build/install/default/lib/ubpf/opam" {"opam"}
+  "_build/install/default/lib/ubpf/ubpf.a" {"ubpf.a"}
+  "_build/install/default/lib/ubpf/ubpf.cma" {"ubpf.cma"}
+  "_build/install/default/lib/ubpf/ubpf.cmi" {"ubpf.cmi"}
+  "_build/install/default/lib/ubpf/ubpf.cmt" {"ubpf.cmt"}
+  "_build/install/default/lib/ubpf/ubpf.cmx" {"ubpf.cmx"}
+  "_build/install/default/lib/ubpf/ubpf.cmxa" {"ubpf.cmxa"}
+  "_build/install/default/lib/ubpf/ubpf.cmxs" {"ubpf.cmxs"}
+  "_build/install/default/lib/ubpf/ubpf.dune" {"ubpf.dune"}
+  "_build/install/default/lib/ubpf/ubpf.ml" {"ubpf.ml"}
+]
+doc: [
+  "_build/install/default/doc/ubpf/README.md"
+]
+stublibs: [
+  "_build/install/default/lib/stublibs/dllubpf_c_stubs.so"
+  "_build/install/default/lib/stublibs/dllubpf_stubs.so"
 ]
