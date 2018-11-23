@@ -1,4 +1,6 @@
+#include <cstdlib>
 #include <stdexcept>
+#include <string>
 #include "bpf.h"
 
 extern "C" {
