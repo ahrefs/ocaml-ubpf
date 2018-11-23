@@ -12,7 +12,7 @@ homepage: "https://github.com/cyberhuman/ocaml-ubpf"
 bug-reports: "https://github.com/cyberhuman/ocaml-ubpf/issues"
 dev-repo: "git+https://github.com/cyberhuman/ocaml-ubpf.git"
 depends: [
-  "ocaml"
+  "ocaml" {>= "4.02"}
   "ocamlfind" {build}
   "dune" {build}
 ]
