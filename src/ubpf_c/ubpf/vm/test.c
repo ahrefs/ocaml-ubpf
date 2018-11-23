@@ -225,11 +225,21 @@ sqrti(uint32_t x)
     return sqrt(x);
 }
 
+static void*
+memfrob_(void *s, size_t n)
+{
+    char *p = (char *)s;
+    while (n-- > 0) {
+      *p++ ^= 42;
+    }
+    return s;
+}
+
 static void
 register_functions(struct ubpf_vm *vm)
 {
     ubpf_register(vm, 0, "gather_bytes", gather_bytes);
-    ubpf_register(vm, 1, "memfrob", memfrob);
+    ubpf_register(vm, 1, "memfrob", memfrob_);
     ubpf_register(vm, 2, "trash_registers", trash_registers);
     ubpf_register(vm, 3, "sqrti", sqrti);
     ubpf_register(vm, 4, "strcmp_ext", strcmp);
