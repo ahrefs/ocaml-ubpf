@@ -3,6 +3,5 @@
   (public_name ubpf)
   (libraries ubpf_c)
   (wrapped false)
-  (c_library_flags (:standard -lstdc++))
   (cxx_names ubpf_stubs bpf)
-  (cxx_flags :standard -I ubpf_c/ubpf/vm/inc))
+  (cxx_flags :standard -std=c++11 -Iubpf_c/ubpf/vm/inc))
