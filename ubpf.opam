@@ -11,6 +11,9 @@ authors: [
 homepage: "https://github.com/cyberhuman/ocaml-ubpf"
 bug-reports: "https://github.com/cyberhuman/ocaml-ubpf/issues"
 dev-repo: "git+https://github.com/cyberhuman/ocaml-ubpf.git"
+available: [
+  os = "linux"
+]
 depends: [
   "ocaml" {>= "4.02"}
   "ocamlfind" {build}
