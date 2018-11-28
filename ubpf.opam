@@ -8,9 +8,9 @@ authors: [
   "Raman Varabets <roman.vorobets@gmail.com>"
   "ygrek <ygrek@autistici.org>"
 ]
-homepage: "https://github.com/cyberhuman/ocaml-ubpf"
-bug-reports: "https://github.com/cyberhuman/ocaml-ubpf/issues"
-dev-repo: "git+https://github.com/cyberhuman/ocaml-ubpf.git"
+homepage: "https://github.com/ahrefs/ocaml-ubpf"
+bug-reports: "https://github.com/ahrefs/ocaml-ubpf/issues"
+dev-repo: "git+https://github.com/ahrefs/ocaml-ubpf.git"
 available: [
   os = "linux"
 ]
