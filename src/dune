@@ -4,4 +4,5 @@
   (libraries ubpf_c)
   (wrapped false)
   (cxx_names ubpf_stubs bpf)
-  (cxx_flags :standard -std=c++11 -Iubpf_c/ubpf/vm/inc))
+  (cxx_flags :standard -std=c++11 -Iubpf_c/ubpf/vm/inc)
+  (c_library_flags :standard -lstdc++))
