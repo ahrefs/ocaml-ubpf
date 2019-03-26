@@ -3,6 +3,7 @@ name: "ubpf"
 version: "0.1"
 synopsis: "OCaml bindings for userspace eBPF VM"
 license: "LGPL-3 with OCaml linking exception"
+tags: ["org:ahrefs"]
 maintainer: "Raman Varabets <roman.vorobets@gmail.com>"
 authors: [
   "Raman Varabets <roman.vorobets@gmail.com>"
