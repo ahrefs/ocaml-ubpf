@@ -22,6 +22,9 @@
 #include <stdarg.h>
 #include <inttypes.h>
 #include "ubpf_int.h"
+
+#if defined(__linux__)
+
 #include <elf.h>
 
 #define MAX_SECTIONS 32
@@ -225,3 +228,16 @@ error:
     free(text_copy);
     return -1;
 }
+
+#else
+
+/* No ELF on MacOS and Windows (alternatively: vendor in elf.h) */
+
+int
+ubpf_load_elf(struct ubpf_vm *vm, const void *elf, size_t elf_size, char **errmsg)
+{
+  *errmsg = ubpf_error("ELF loading disabled during build (supposedly missing <elf.h>)");
+  return -1;
+}
+
+#endif

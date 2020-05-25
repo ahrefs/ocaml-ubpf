@@ -24,7 +24,12 @@
 #include <string.h>
 #include <getopt.h>
 #include <errno.h>
+#if defined(__linux__)
 #include <elf.h>
+#else
+#define	ELFMAG		"\177ELF"
+#define	SELFMAG		4
+#endif
 #include <math.h>
 #include "ubpf.h"
 

@@ -1,6 +1,5 @@
 opam-version: "2.0"
 name: "ubpf"
-version: "0.1"
 synopsis: "OCaml bindings for userspace eBPF VM"
 license: "LGPL-3 with OCaml linking exception"
 tags: ["org:ahrefs"]
@@ -12,9 +11,7 @@ authors: [
 homepage: "https://github.com/ahrefs/ocaml-ubpf"
 bug-reports: "https://github.com/ahrefs/ocaml-ubpf/issues"
 dev-repo: "git+https://github.com/ahrefs/ocaml-ubpf.git"
-available: [
-  os = "linux"
-]
+available: os != "win32"
 depends: [
   "ocaml" {>= "4.02"}
   "dune" {>= "2.9.0"}
