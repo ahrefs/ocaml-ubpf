@@ -17,8 +17,7 @@ available: [
 ]
 depends: [
   "ocaml" {>= "4.02"}
-  "ocamlfind" {build}
-  "dune" {build}
+  "dune" {>= "2.9.0"}
 ]
 build: [
   ["dune" "subst"] {pinned}

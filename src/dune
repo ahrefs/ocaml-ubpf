@@ -3,6 +3,9 @@
   (public_name ubpf)
   (libraries ubpf_c)
   (wrapped false)
-  (cxx_names ubpf_stubs bpf)
-  (cxx_flags :standard -std=c++11 -Iubpf_c/ubpf/vm/inc)
+  (foreign_stubs
+   (include_dirs ubpf_c/ubpf/vm/inc)
+   (language cxx)
+   (names ubpf_stubs bpf)
+   (flags :standard -std=c++11))
   (c_library_flags :standard -lstdc++))
