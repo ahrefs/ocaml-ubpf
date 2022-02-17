@@ -29,6 +29,8 @@ jobs:
         with:
           ocaml-version: ${{ matrix.ocaml-version }}
 
+      - run: rm -f $(opam var lib)/ocaml/version
+
       - run: opam pin add ubpf.dev . --no-action
 
       - run: opam depext ubpf --yes --with-doc --with-test
